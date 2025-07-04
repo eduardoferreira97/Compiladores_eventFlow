@@ -2,8 +2,9 @@
 
 ## 1. Equipe
 
-* Eduardo Ferreira
-* *(Adicione o nome dos outros integrantes do grupo aqui)*
+* Eduardo Jose Ferreira de Souza
+* Levi Vidal Feitosa
+* Sofia Alencar Uchôa de Queiroz
 
 ---
 
@@ -43,7 +44,7 @@ O projeto utiliza o Maven para gestão de dependências e execução. Para compi
 
 1.  **Clone o Repositório:**
     ```bash
-    git clone <URL_DO_SEU_REPOSITORIO_GIT>
+    git clone [https://github.com/eduardoferreira97/Compiladores_eventFlow](https://github.com/eduardoferreira97/Compiladores_eventFlow.git)
     cd EventFlowProject
     ```
 
