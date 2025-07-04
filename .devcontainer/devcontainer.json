@@ -1,12 +1,12 @@
 {
     "name": "EventFlow Project (Java & Maven)",
+    "image": "mcr.microsoft.com/devcontainers/java:0-17",
 
-    "image": "mcr.microsoft.com/devcontainers/java:0-17-sdk",
-    
-    // Comandos que serão executados automaticamente DEPOIS que o container for criado.
-    "postCreateCommand": "mvn clean install",
-    
-    // Personalizações para o VS Code dentro do Codespace
+    // Executa comandos para instalar o Maven assim que o container é criado.
+    // "sudo apt-get update" atualiza a lista de pacotes.
+    // "sudo apt-get install -y maven" instala o Maven.
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y maven && mvn clean install",
+
     "customizations": {
         "vscode": {
             "extensions": [
@@ -14,6 +14,5 @@
             ]
         }
     },
-
     "remoteUser": "vscode"
 }
