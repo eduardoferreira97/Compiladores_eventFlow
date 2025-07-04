@@ -1,0 +1,20 @@
+config {
+    app_name: "Meu App Incrível";
+    app_version: semver("1.2.3");
+    primary_color: color("#3498db");
+}
+
+PLATFORM "android" {
+    // Gera um arquivo de configuração a partir de um template
+    generate file from_template("./templates/config.xml.template") to "build/android/res/values/config.xml"
+}
+
+PIPELINE {
+    stage "Build & Test" {
+        run "echo 'Compilando o app...'";
+        run "echo 'Versão: '";
+        run "echo Versão: {{app_version}}";
+
+        run "echo 'Executando testes...'";
+    }
+}

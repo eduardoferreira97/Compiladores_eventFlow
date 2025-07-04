@@ -1,0 +1,7 @@
+<config>
+    <appName>{{appName}}</appName>
+    <version>{{appVersion}}</version>
+    <theme>
+        <color>{{primaryColor}}</color>
+    </theme>
+</config>

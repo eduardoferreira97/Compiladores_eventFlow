@@ -1,0 +1,32 @@
+// .devcontainer/devcontainer.json
+{
+    "name": "EventFlow Project Dev Container",
+
+    // Define a imagem base do container. Esta imagem já inclui Java 11 e ferramentas essenciais.
+    "image": "mcr.microsoft.com/devcontainers/java:0-11",
+
+    "features": {
+        // Garante que o Maven esteja disponível no ambiente
+        "ghcr.io/devcontainers/features/maven:1": {}
+    },
+
+    // Comandos que serão executados automaticamente DEPOIS que o container for criado.
+    // Isto irá compilar o projeto e baixar as dependências assim que o Codespace iniciar.
+    "postCreateCommand": "mvn clean install",
+
+    // Personalizações para o VS Code dentro do Codespace
+    "customizations": {
+        "vscode": {
+            // Instala extensões úteis para Java automaticamente
+            "extensions": [
+                "vscjava.vscode-java-pack"
+            ]
+        }
+    },
+
+    // Mapeia uma porta, caso sua aplicação fosse um servidor web (opcional para este projeto)
+    // "forwardPorts": [],
+
+    // Define o usuário que executará os comandos dentro do container
+    "remoteUser": "vscode"
+}
